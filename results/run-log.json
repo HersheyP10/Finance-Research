@@ -1,0 +1,193 @@
+{
+  "samples": [
+    {
+      "period": "2008\u20132010",
+      "requested_start": "2008-01-01",
+      "requested_end": "2010-12-31",
+      "base_price_date": "2007-12-31",
+      "first_return_date": "2008-01-02",
+      "last_return_date": "2010-12-31",
+      "daily_returns": 757,
+      "price_observations_including_base": 758
+    },
+    {
+      "period": "2020\u20132021",
+      "requested_start": "2020-01-01",
+      "requested_end": "2021-12-31",
+      "base_price_date": "2019-12-31",
+      "first_return_date": "2020-01-02",
+      "last_return_date": "2021-12-31",
+      "daily_returns": 505,
+      "price_observations_including_base": 506
+    },
+    {
+      "period": "2022\u20132026 YTD",
+      "requested_start": "2022-01-01",
+      "requested_end": "2026-09-15",
+      "base_price_date": "2021-12-31",
+      "first_return_date": "2022-01-03",
+      "last_return_date": "2026-09-15",
+      "daily_returns": 1179,
+      "price_observations_including_base": 1180
+    }
+  ],
+  "tests": [
+    {
+      "period": "2008\u20132010",
+      "daily_returns": 757,
+      "horizon_trading_days": 2,
+      "variance_ratio": 0.8760466156966303,
+      "robust_z": -2.27075768632973,
+      "robust_p": 0.02316165076150578,
+      "homoskedastic_p_sensitivity_only": 0.0006486578237925311,
+      "holm_p_within_period": 0.09264660304602312,
+      "holm_p_all_12_tests": 0.27474602903542955,
+      "reject_5pct_unadjusted": true,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2008\u20132010",
+      "daily_returns": 757,
+      "horizon_trading_days": 5,
+      "variance_ratio": 0.7366121714297835,
+      "robust_z": -1.99573211372994,
+      "robust_p": 0.045963089580974836,
+      "homoskedastic_p_sensitivity_only": 0.0009407342292870879,
+      "holm_p_within_period": 0.1378892687429245,
+      "holm_p_all_12_tests": 0.45963089580974836,
+      "reject_5pct_unadjusted": true,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2008\u20132010",
+      "daily_returns": 757,
+      "horizon_trading_days": 10,
+      "variance_ratio": 0.6987507327130874,
+      "robust_z": -1.434685551644183,
+      "robust_p": 0.1513767232528629,
+      "homoskedastic_p_sensitivity_only": 0.014095102496810563,
+      "holm_p_within_period": 0.3027534465057258,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2008\u20132010",
+      "daily_returns": 757,
+      "horizon_trading_days": 20,
+      "variance_ratio": 0.6987650458037589,
+      "robust_z": -0.9601449168046557,
+      "robust_p": 0.3369822850194151,
+      "homoskedastic_p_sensitivity_only": 0.0953852876728658,
+      "holm_p_within_period": 0.3369822850194151,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2020\u20132021",
+      "daily_returns": 505,
+      "horizon_trading_days": 2,
+      "variance_ratio": 0.6888833765546982,
+      "robust_z": -2.2751738581577223,
+      "robust_p": 0.02289550241961913,
+      "homoskedastic_p_sensitivity_only": 2.7200464103316335e-12,
+      "holm_p_within_period": 0.09158200967847652,
+      "holm_p_all_12_tests": 0.27474602903542955,
+      "reject_5pct_unadjusted": true,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2020\u20132021",
+      "daily_returns": 505,
+      "horizon_trading_days": 5,
+      "variance_ratio": 0.736462135284079,
+      "robust_z": -0.886157949472756,
+      "robust_p": 0.3755324196454821,
+      "homoskedastic_p_sensitivity_only": 0.0068688382340758025,
+      "holm_p_within_period": 1.0,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2020\u20132021",
+      "daily_returns": 505,
+      "horizon_trading_days": 10,
+      "variance_ratio": 0.7657045710860979,
+      "robust_z": -0.5417930390221498,
+      "robust_p": 0.5879610872725638,
+      "homoskedastic_p_sensitivity_only": 0.1189021192421238,
+      "holm_p_within_period": 1.0,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2020\u20132021",
+      "daily_returns": 505,
+      "horizon_trading_days": 20,
+      "variance_ratio": 0.862058064948318,
+      "robust_z": -0.23533527421866005,
+      "robust_p": 0.813948518928016,
+      "homoskedastic_p_sensitivity_only": 0.5328078483498104,
+      "holm_p_within_period": 1.0,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2022\u20132026 YTD",
+      "daily_returns": 1179,
+      "horizon_trading_days": 2,
+      "variance_ratio": 0.9867326556186217,
+      "robust_z": -0.2875497094109563,
+      "robust_p": 0.7736914455992285,
+      "homoskedastic_p_sensitivity_only": 0.6487099429508247,
+      "holm_p_within_period": 1.0,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2022\u20132026 YTD",
+      "daily_returns": 1179,
+      "horizon_trading_days": 5,
+      "variance_ratio": 0.9189593054219521,
+      "robust_z": -0.8368516590220446,
+      "robust_p": 0.40267595565010117,
+      "homoskedastic_p_sensitivity_only": 0.2040474258860452,
+      "holm_p_within_period": 1.0,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2022\u20132026 YTD",
+      "daily_returns": 1179,
+      "horizon_trading_days": 10,
+      "variance_ratio": 0.8618920362207714,
+      "robust_z": -0.9259666336755914,
+      "robust_p": 0.35446332054916985,
+      "homoskedastic_p_sensitivity_only": 0.16016861094279777,
+      "holm_p_within_period": 1.0,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    },
+    {
+      "period": "2022\u20132026 YTD",
+      "daily_returns": 1179,
+      "horizon_trading_days": 20,
+      "variance_ratio": 0.8056469988548586,
+      "robust_z": -0.9364481712660234,
+      "robust_p": 0.3490424858303016,
+      "homoskedastic_p_sensitivity_only": 0.17934841574142935,
+      "holm_p_within_period": 1.0,
+      "holm_p_all_12_tests": 1.0,
+      "reject_5pct_unadjusted": false,
+      "reject_5pct_holm_within_period": false
+    }
+  ],
+  "validation": "All 12 VR, Z and p-value triples match an independent scalar implementation to rtol=1e-10, atol=1e-12."
+}
