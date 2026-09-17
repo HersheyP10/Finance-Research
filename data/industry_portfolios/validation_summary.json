@@ -1,0 +1,124 @@
+{
+  "prepared_utc": "2026-09-17T04:51:55.840471+00:00",
+  "units": "Daily simple total returns in percent; 1.00 means 1%.",
+  "weighting": "Value weighted; equal-weighted alternatives remain in the raw archives.",
+  "datasets": [
+    {
+      "industry_count": 12,
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/12_Industry_Portfolios_daily_TXT.zip",
+      "source_header": "This file was created using the 202607 CRSP database.",
+      "archive_sha256": "c0698bf47e0a56cb14e1a76966401686baf53c6aa3a293a51f3c9c51a378a5a5",
+      "first_available_date": "1926-07-01",
+      "last_available_date": "2026-07-31",
+      "columns": [
+        "NoDur",
+        "Durbl",
+        "Manuf",
+        "Enrgy",
+        "Chems",
+        "BusEq",
+        "Telcm",
+        "Utils",
+        "Shops",
+        "Hlth",
+        "Money",
+        "Other"
+      ],
+      "windows": [
+        {
+          "period": "2008-2010",
+          "first_return": "2008-01-02",
+          "last_return": "2010-12-31",
+          "dates_per_industry": 757,
+          "missing_return_cells": 0,
+          "matches_sp500_trading_dates": true
+        },
+        {
+          "period": "2020-2021",
+          "first_return": "2020-01-02",
+          "last_return": "2021-12-31",
+          "dates_per_industry": 505,
+          "missing_return_cells": 0,
+          "matches_sp500_trading_dates": true
+        }
+      ]
+    },
+    {
+      "industry_count": 49,
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/49_Industry_Portfolios_daily_TXT.zip",
+      "source_header": "This file was created using the 202607 CRSP database.",
+      "archive_sha256": "da0ffb619de62babc36a3bbfc5e72824850d3a9e6e71ca82c164c82162a13af3",
+      "first_available_date": "1926-07-01",
+      "last_available_date": "2026-07-31",
+      "columns": [
+        "Agric",
+        "Food",
+        "Soda",
+        "Beer",
+        "Smoke",
+        "Toys",
+        "Fun",
+        "Books",
+        "Hshld",
+        "Clths",
+        "Hlth",
+        "MedEq",
+        "Drugs",
+        "Chems",
+        "Rubbr",
+        "Txtls",
+        "BldMt",
+        "Cnstr",
+        "Steel",
+        "FabPr",
+        "Mach",
+        "ElcEq",
+        "Autos",
+        "Aero",
+        "Ships",
+        "Guns",
+        "Gold",
+        "Mines",
+        "Coal",
+        "Oil",
+        "Util",
+        "Telcm",
+        "PerSv",
+        "BusSv",
+        "Hardw",
+        "Softw",
+        "Chips",
+        "LabEq",
+        "Paper",
+        "Boxes",
+        "Trans",
+        "Whlsl",
+        "Rtail",
+        "Meals",
+        "Banks",
+        "Insur",
+        "RlEst",
+        "Fin",
+        "Other"
+      ],
+      "windows": [
+        {
+          "period": "2008-2010",
+          "first_return": "2008-01-02",
+          "last_return": "2010-12-31",
+          "dates_per_industry": 757,
+          "missing_return_cells": 0,
+          "matches_sp500_trading_dates": true
+        },
+        {
+          "period": "2020-2021",
+          "first_return": "2020-01-02",
+          "last_return": "2021-12-31",
+          "dates_per_industry": 505,
+          "missing_return_cells": 0,
+          "matches_sp500_trading_dates": true
+        }
+      ]
+    }
+  ]
+}
