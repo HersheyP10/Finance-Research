@@ -27,3 +27,9 @@ Yahoo endpoint and source provenance are included in the results JSON. September
 [US Market Standard Deviation by Sectors](results/industry_efficiency/us_market_standard_deviation_by_sectors.md) contains scores for every industry, cross-industry standard deviations, and a conservative bootstrap uncertainty analysis for the 12-industry panel. The declared score is `E = 1 - mean(abs(VR(q)-1))` across 2-, 5-, 10-, and 20-day horizons. Estimated standard deviations are nonzero, but the uncertainty analysis does not exclude equal underlying scores.
 
 Reproduce with `.venv/bin/python analyze_industry_efficiency.py`. The full-precision JSON includes all individual variance ratio tests and a separate 49-industry supplement. Scores describe proximity to the random-walk variance restriction; they are not probabilities or proof of market efficiency.
+
+## International sector comparison
+
+[Global Market Efficiency by Sector](results/global_market_efficiency/global_market_efficiency_by_sector.md) compares complete monthly GICS sector returns across 23 developed, 23 emerging (used as the developing-market proxy), and 18 frontier markets in the JKP classification/data intersection. It covers 2008–2010, 2020–2021, and 2022–2025; the available source ends in December 2025, so it cannot yet cover 2026. The report gives country-averaged sector scores, country counts, and cross-sector standard deviations, alongside examples of local broad-market benchmark indices.
+
+Reproduce with `.venv/bin/python analyze_global_market_sectors.py`. The frozen public data files are in `data/global_industry/`; JKP data are licensed CC BY-NC 4.0. Monthly horizons (2, 3, and 6 months) are used because international GICS industry returns are monthly; those scores should not be numerically compared with the earlier daily U.S. estimates.

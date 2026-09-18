@@ -1,0 +1,850 @@
+{
+  "title": "Global Market Efficiency by Sector",
+  "source": "Jensen, Kelly, and Pedersen (2023) Global Factor Data, GICS monthly value-weighted country-industry returns",
+  "source_url": "https://www.jkpfactors.com/data",
+  "data_license": "Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)",
+  "data_updated_through": "2025-12",
+  "requested_latest_window": "2022-2026",
+  "available_latest_window": "2022-2025",
+  "market_classification_source": "Downloaded JKP country-classification XLSX; msci_development field, used as a fixed classification snapshot for all windows",
+  "groups": {
+    "developed": "Developed",
+    "emerging": "Developing (MSCI Emerging proxy)",
+    "frontier": "Frontier"
+  },
+  "country_counts_in_gics_data_classification_intersection": {
+    "developed": 23,
+    "emerging": 23,
+    "frontier": 18
+  },
+  "periods_monthly": {
+    "2008-2010": {
+      "first": "2008-01-31",
+      "last": "2010-12-31",
+      "n": 36
+    },
+    "2020-2021": {
+      "first": "2020-01-31",
+      "last": "2021-12-31",
+      "n": 24
+    },
+    "2022-2025": {
+      "first": "2022-01-31",
+      "last": "2025-12-31",
+      "n": 48
+    }
+  },
+  "horizons_months": [
+    2,
+    3,
+    6
+  ],
+  "efficiency_score": "1 - mean(abs(VR(q)-1)) over q=2,3,6 months",
+  "aggregation": "Equal-weight country efficiency scores within each market-class x sector x period; then equal-weight sector means within each class-period. Country portfolios are value-weighted in the source data.",
+  "complete_monthly_coverage_rule": "All calendar month-end observations in a window must exist with n>0 and finite return; no gaps are imputed.",
+  "country_sector_cells_validated_against_arch_unitroot": 3021,
+  "source_hashes": {
+    "classification_xlsx_sha256": "d296bc25737592b80afc5558f6f217cb399d37295e1c73585aeea44cee906822",
+    "country_gics_zip_sha256": {
+      "ARE": "23f9179723911e7b57770e827db995adf07202a095ac2dc0750d8eeced0cad87",
+      "AUS": "225ec3c19942f325b2ecc5470b6917de658356374648a06ce984c00987064c11",
+      "AUT": "2392b3908d57832bb24a55bf4532956a65d42995541f56b495f67a713574dd6f",
+      "BEL": "f01772f8bfdff647c8d178397d509b624d95b401a61439a55577e744de0abb60",
+      "BGD": "84dfc4dd405f0a3a48d64d58e8a182ac4bca50d0a4083376754410ce5222759d",
+      "BHR": "212099a9b1ac2c331e7d74461230799d608a99f005f7772768320ab72df15e65",
+      "BRA": "52dfa9e9aff5e942b033b83d18005cceec81903e2437b466cb631465fcf36ee9",
+      "CAN": "fb4cb5f36cc68018c609b7744db46ee963e784dee67e65ab2b0c34811647dcaa",
+      "CHE": "7792d5982b453830d4f5ef88ebe792ac1b6f1206fb5d04238e4050c954f1dc0a",
+      "CHL": "0a773f109506b406041ceb3f81b02e767e90f6d245dbc7de5ffd604cfadea741",
+      "CHN": "2ac709ec134cb0b4e74a02a558e44fdb67a3a849d749704ace5be33c3849ba3c",
+      "CIV": "d794a078f90f705a6a711477b8462701d89443af7bec80a4a1307bfb92d6dbf4",
+      "COL": "c71b0f6f25c5aef038b740258a9e72490b2ee977606bd1c2dbcc1b1b33e1c84c",
+      "DEU": "ecf624118c938912cf14e26d5ff25f176ff68832e4cf329cb052f82da83e855d",
+      "DNK": "312a73df2951eae1eccce9e7e0d1e6db97e34d575654cd253f792ab4fbdbab72",
+      "EGY": "0e27c8d9bbefa3aab255c919c1bc90c4ea0cba36f590d266de688c7be07b98f4",
+      "ESP": "3d4e60ba8d9ca150c1b2bf43cd692034f18e8e19a36f04eec0265403050a6401",
+      "FIN": "255073cc0371f0281f5c8bbb38e0dd978f4da2615a623ce47af7a0a51dc88950",
+      "FRA": "816c4902fcbe3d4e04c64f27cf627331f206e56149d676ba7dfdda9acd13649a",
+      "GBR": "1d7dd591740ddc180605ae160b7cc0544c680e79d64e406ff20ecb6166b67e99",
+      "GRC": "c451bb192528d2dbf441dee2ddbe9150c510c9cc1454007290fb9d96c3431877",
+      "HKG": "22f6849f1a8d71af869e347313cf0facbc50b532c6a3610b81f33e6e296ebec7",
+      "HRV": "b6743547e2e16caedcb5a7074cb1afc0634664ac4fb818d3a39b4da89827e87b",
+      "HUN": "f777fed195056aa11c45c85b7f8d18fb820faff903a0d5ceb40861f2f225592d",
+      "IDN": "586d39f019ca62beaa7e0d7d96f8c2c0d00fb5ee3d4ff6c3e236e427f10bd25c",
+      "IND": "b73bb09c40eb0001c029724ba8c3f1e81451d734d6d82ea71adfad7cca794ccf",
+      "IRL": "32fb8cae003a52029888f0a392490a24747c1da82528a61f979e4cc06e9bf299",
+      "ISR": "e91dd9248cff139edbd0ea5c97450ded676660539eb45aeb7770025363ae01f1",
+      "ITA": "defebca6c9211cd1bc347d6c20b6aaa68b684b4266263ea9acdc042ad8e9fc83",
+      "JOR": "c306413bec7f3b1ad000bae9972d8d58a5bce8edbc3047faeacd4ce7299732d2",
+      "JPN": "574c9471074849308bc8fc82b8fec4c8e62674dd49fcfcd5f7e205710bd9ed53",
+      "KEN": "71f240db53d3b2ac46d79ebcd304468ba033d50b64a61278ae432f54f1ed30e1",
+      "KOR": "22b088dd86602232d8deb4ee4a76b925d5298adece87d764b9fe9a36e0eba92b",
+      "KWT": "b541cc5b72137e22ba5cb55c727116bd988d5d1cbecca9cc0e584294728e5250",
+      "LKA": "d88c5cc6d63ae8cf4e3f9403834284c8b993b59c44f5bf7f6274552c1ffc6376",
+      "LTU": "836c2515e2a5a39e6af7fe279fb7681b2e3e50c52c303659fd96efeed4f6695b",
+      "LVA": "65a394efaf19d8368c0aa1ab07da8d1ccf58f2c8bfa06f81a41f188ef68e6b74",
+      "MAR": "227f70cfbedd519b4344015e6ce62d098ce3e7d3b41323d322c8263191df318e",
+      "MEX": "154b48864ac56a164cf9c8de4f4666617272b8c718b3d5ad15dd4b9eb906f3d5",
+      "MUS": "4b20f12a8e136050b70fdc7b92ec6a5ba731f00a13cc9835976d4010f1f8abeb",
+      "MYS": "2f8b8c52929d45448f48de9d57e4750d4f59126aaa130d23b6d14037bb27c5bf",
+      "NLD": "9a0b5de705fa8698738ae96a2989178c51abe9a380f5a430e294ebd4522d3ed6",
+      "NOR": "31e25c2f5c849cee63d563b7d8673253a32ebf99c932a8aa3ca9b24b55006017",
+      "NZL": "b39bfd119ca1131432620c8cedd739e6c591d369f4146f2108fcd786135b7b87",
+      "OMN": "70923d414deed21b4eeed7c6274d41dadba96ba3fe8c90703ad19f3f1586c5ea",
+      "PAK": "3924ae31f60964651d8d1059dc70b09e43cedda6d0515a417f1bceb6edd410c9",
+      "PER": "4fde711f028809e1bce3a4281f866abd0d79df53eb4c97f41392a37524ec5df2",
+      "PHL": "539b3554407db22a27ffeaaa4ed0662bddfb5bf1cc3488966b3f763ddd718b9b",
+      "POL": "f75657cf2928f77f67b49073b694563757279012e15f4c5c4a6c0c154df7793c",
+      "PRT": "f804ccd6444d11f3e2b3a2352abebdbe67a4fd56a98d128cbb898a355392a6f2",
+      "QAT": "5ccc75bb4c8fc7f20b02f2ad90c54fe3bdfe8d7b6a00c9f553fe44a7f733aa6a",
+      "ROU": "1627af1d254b7dc578be0044ed9441e608bff8f66c09c5a468cae0cfdd50d9ac",
+      "SAU": "b3f286667f0e374c7db8612fd341b2d9d7d7bd4490107017c61f353ad40b7838",
+      "SGP": "ac1874c80e5935521ded7c5b89cf231a75881a92c2906482afddc5c8028b66c6",
+      "SRB": "a737f896ce08c7aaad0a160a8bb69f42214446e4e26616aa8be96cf8ce190373",
+      "SVN": "223804c0d829f86b6d50525c0e92dc02ad64791feb88ef857150a2e42b91ecf0",
+      "SWE": "b751b8b9666bf7ff9624089b11e95ed43d24422c8ad67f5586de687e9d571991",
+      "THA": "ec75c6b623ae6932b50a4b7b4634c0ee80b582fe291172f66551d9cb74cc9ccd",
+      "TUN": "a106862a02e9f953b85efecb018dbe1fecdb6b546e01f9fa5b13b5f18caffd8f",
+      "TUR": "fbf0ebe0c5a2ee48d87b8909b80d669ad1ccf613f24251f4ef3dab36f685cb41",
+      "TWN": "284050142c0140bb7c301482402e44d25499374d62a044235aed0908833f6ab1",
+      "USA": "7bf579b4139c4ccc5127a284c241f412a5554b4c950b9c018bb0cf4b1d87d1aa",
+      "VNM": "26706fd1c3423ec7d8ab4b5060dcecd2575fa305436fad1cfa5da3c0d9f89be6",
+      "ZAF": "bd5b0e74e1c53273e7f21447a214b3e7bdbf0653a9173fe03dfdb4402ace9c16"
+    }
+  },
+  "coverage": {
+    "developed": {
+      "2008-2010": {
+        "30": 16,
+        "45": 18,
+        "10": 9,
+        "25": 21,
+        "40": 21,
+        "20": 21,
+        "15": 15,
+        "35": 17,
+        "50": 6,
+        "55": 9
+      },
+      "2020-2021": {
+        "30": 16,
+        "45": 18,
+        "10": 10,
+        "25": 18,
+        "40": 17,
+        "20": 21,
+        "15": 15,
+        "35": 18,
+        "50": 12,
+        "55": 8,
+        "60": 16
+      },
+      "2022-2025": {
+        "30": 16,
+        "45": 17,
+        "10": 10,
+        "25": 15,
+        "40": 17,
+        "20": 21,
+        "15": 15,
+        "35": 19,
+        "50": 12,
+        "55": 9,
+        "60": 14
+      }
+    },
+    "emerging": {
+      "2008-2010": {
+        "40": 20,
+        "15": 19,
+        "55": 5,
+        "25": 15,
+        "20": 18,
+        "30": 17,
+        "45": 9,
+        "35": 6,
+        "10": 3,
+        "50": 3
+      },
+      "2020-2021": {
+        "40": 20,
+        "20": 19,
+        "60": 17,
+        "15": 19,
+        "55": 7,
+        "25": 17,
+        "30": 18,
+        "35": 10,
+        "45": 11,
+        "10": 6,
+        "50": 9
+      },
+      "2022-2025": {
+        "40": 20,
+        "20": 19,
+        "15": 18,
+        "55": 9,
+        "25": 17,
+        "30": 17,
+        "35": 11,
+        "45": 10,
+        "10": 5,
+        "60": 14,
+        "50": 8
+      }
+    },
+    "frontier": {
+      "2008-2010": {
+        "40": 10,
+        "25": 2,
+        "30": 2,
+        "20": 3,
+        "15": 4
+      },
+      "2020-2021": {
+        "40": 8,
+        "25": 5,
+        "30": 3,
+        "20": 6,
+        "15": 3,
+        "55": 3,
+        "10": 2,
+        "35": 2,
+        "45": 1,
+        "60": 1
+      },
+      "2022-2025": {
+        "25": 7,
+        "40": 11,
+        "15": 7,
+        "20": 8,
+        "30": 5,
+        "35": 3,
+        "55": 4,
+        "10": 2,
+        "45": 1,
+        "60": 1
+      }
+    }
+  },
+  "summary": {
+    "group": {
+      "developed": {
+        "2008-2010": {
+          "countries_in_classification_snapshot": 23,
+          "countries_with_at_least_one_complete_sector": 22,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "AUS",
+            "AUT",
+            "BEL",
+            "CAN",
+            "CHE",
+            "DEU",
+            "DNK",
+            "ESP",
+            "FIN",
+            "FRA",
+            "GBR",
+            "HKG",
+            "ISR",
+            "ITA",
+            "JPN",
+            "NLD",
+            "NOR",
+            "NZL",
+            "PRT",
+            "SGP",
+            "SWE",
+            "USA"
+          ],
+          "complete_country_sector_cells": 153,
+          "sectors_represented": 10,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"
+          ],
+          "mean_of_sector_means": 0.4262056557192448,
+          "population_sd_across_sector_means": 0.09184864330063482
+        },
+        "2020-2021": {
+          "countries_in_classification_snapshot": 23,
+          "countries_with_at_least_one_complete_sector": 21,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "AUS",
+            "AUT",
+            "BEL",
+            "CAN",
+            "CHE",
+            "DEU",
+            "DNK",
+            "ESP",
+            "FIN",
+            "FRA",
+            "GBR",
+            "HKG",
+            "ISR",
+            "ITA",
+            "JPN",
+            "NLD",
+            "NOR",
+            "NZL",
+            "SGP",
+            "SWE",
+            "USA"
+          ],
+          "complete_country_sector_cells": 169,
+          "sectors_represented": 11,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60"
+          ],
+          "mean_of_sector_means": 0.7602771738451736,
+          "population_sd_across_sector_means": 0.04325446637730287
+        },
+        "2022-2025": {
+          "countries_in_classification_snapshot": 23,
+          "countries_with_at_least_one_complete_sector": 21,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "AUS",
+            "AUT",
+            "BEL",
+            "CAN",
+            "CHE",
+            "DEU",
+            "DNK",
+            "ESP",
+            "FIN",
+            "FRA",
+            "GBR",
+            "HKG",
+            "ISR",
+            "ITA",
+            "JPN",
+            "NLD",
+            "NOR",
+            "NZL",
+            "SGP",
+            "SWE",
+            "USA"
+          ],
+          "complete_country_sector_cells": 165,
+          "sectors_represented": 11,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60"
+          ],
+          "mean_of_sector_means": 0.8252884041826344,
+          "population_sd_across_sector_means": 0.037577391861138815
+        }
+      },
+      "emerging": {
+        "2008-2010": {
+          "countries_in_classification_snapshot": 23,
+          "countries_with_at_least_one_complete_sector": 22,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "ARE",
+            "BRA",
+            "CHL",
+            "CHN",
+            "COL",
+            "EGY",
+            "GRC",
+            "IDN",
+            "IND",
+            "KOR",
+            "KWT",
+            "MEX",
+            "MYS",
+            "PER",
+            "PHL",
+            "POL",
+            "QAT",
+            "SAU",
+            "THA",
+            "TUR",
+            "TWN",
+            "ZAF"
+          ],
+          "complete_country_sector_cells": 115,
+          "sectors_represented": 10,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"
+          ],
+          "mean_of_sector_means": 0.4041723703202013,
+          "population_sd_across_sector_means": 0.16383908156643698
+        },
+        "2020-2021": {
+          "countries_in_classification_snapshot": 23,
+          "countries_with_at_least_one_complete_sector": 21,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "ARE",
+            "BRA",
+            "CHL",
+            "CHN",
+            "EGY",
+            "GRC",
+            "IDN",
+            "IND",
+            "KOR",
+            "KWT",
+            "MEX",
+            "MYS",
+            "PER",
+            "PHL",
+            "POL",
+            "QAT",
+            "SAU",
+            "THA",
+            "TUR",
+            "TWN",
+            "ZAF"
+          ],
+          "complete_country_sector_cells": 153,
+          "sectors_represented": 11,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60"
+          ],
+          "mean_of_sector_means": 0.7347497667487821,
+          "population_sd_across_sector_means": 0.06376622640182003
+        },
+        "2022-2025": {
+          "countries_in_classification_snapshot": 23,
+          "countries_with_at_least_one_complete_sector": 21,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "ARE",
+            "BRA",
+            "CHL",
+            "CHN",
+            "EGY",
+            "GRC",
+            "IDN",
+            "IND",
+            "KOR",
+            "KWT",
+            "MEX",
+            "MYS",
+            "PER",
+            "PHL",
+            "POL",
+            "QAT",
+            "SAU",
+            "THA",
+            "TUR",
+            "TWN",
+            "ZAF"
+          ],
+          "complete_country_sector_cells": 148,
+          "sectors_represented": 11,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60"
+          ],
+          "mean_of_sector_means": 0.7883980618268452,
+          "population_sd_across_sector_means": 0.048999761000799356
+        }
+      },
+      "frontier": {
+        "2008-2010": {
+          "countries_in_classification_snapshot": 18,
+          "countries_with_at_least_one_complete_sector": 11,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "BGD",
+            "BHR",
+            "HRV",
+            "JOR",
+            "KEN",
+            "LKA",
+            "MAR",
+            "OMN",
+            "PAK",
+            "TUN",
+            "VNM"
+          ],
+          "complete_country_sector_cells": 21,
+          "sectors_represented": 5,
+          "sector_codes": [
+            "15",
+            "20",
+            "25",
+            "30",
+            "40"
+          ],
+          "mean_of_sector_means": 0.3922840607388702,
+          "population_sd_across_sector_means": 0.07646317645104443
+        },
+        "2020-2021": {
+          "countries_in_classification_snapshot": 18,
+          "countries_with_at_least_one_complete_sector": 10,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "CIV",
+            "HRV",
+            "KEN",
+            "MAR",
+            "MUS",
+            "OMN",
+            "PAK",
+            "ROU",
+            "TUN",
+            "VNM"
+          ],
+          "complete_country_sector_cells": 34,
+          "sectors_represented": 10,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "55",
+            "60"
+          ],
+          "mean_of_sector_means": 0.7518596443829386,
+          "population_sd_across_sector_means": 0.07554946053523368
+        },
+        "2022-2025": {
+          "countries_in_classification_snapshot": 18,
+          "countries_with_at_least_one_complete_sector": 13,
+          "countries_with_at_least_one_complete_sector_iso3": [
+            "BGD",
+            "CIV",
+            "HRV",
+            "JOR",
+            "KEN",
+            "LKA",
+            "MAR",
+            "MUS",
+            "OMN",
+            "PAK",
+            "ROU",
+            "TUN",
+            "VNM"
+          ],
+          "complete_country_sector_cells": 49,
+          "sectors_represented": 10,
+          "sector_codes": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "55",
+            "60"
+          ],
+          "mean_of_sector_means": 0.6809347054602183,
+          "population_sd_across_sector_means": 0.15613977053570688
+        }
+      }
+    },
+    "balanced_common_sector_set": {
+      "gics_codes": [
+        "15",
+        "20",
+        "25",
+        "30",
+        "40"
+      ],
+      "sectors": [
+        "Materials",
+        "Industrials",
+        "Consumer Discretionary",
+        "Consumer Staples",
+        "Financials"
+      ],
+      "periods": {
+        "2008-2010": {
+          "developed": {
+            "mean_of_common_sector_means": 0.34857529345406896,
+            "population_sd_across_common_sector_means": 0.03843359424459479,
+            "sector_means": {
+              "Materials": 0.3612212136754458,
+              "Industrials": 0.3431724932835885,
+              "Consumer Discretionary": 0.29257502409034597,
+              "Consumer Staples": 0.41084803858231744,
+              "Financials": 0.33505969763864707
+            },
+            "country_counts_by_sector": {
+              "Materials": 15,
+              "Industrials": 21,
+              "Consumer Discretionary": 21,
+              "Consumer Staples": 16,
+              "Financials": 21
+            }
+          },
+          "emerging": {
+            "mean_of_common_sector_means": 0.28421959907972505,
+            "population_sd_across_common_sector_means": 0.0633181125475152,
+            "sector_means": {
+              "Materials": 0.1914268842807352,
+              "Industrials": 0.2341186755129082,
+              "Consumer Discretionary": 0.2968212404357189,
+              "Consumer Staples": 0.3611665046179211,
+              "Financials": 0.33756469055134175
+            },
+            "country_counts_by_sector": {
+              "Materials": 19,
+              "Industrials": 18,
+              "Consumer Discretionary": 15,
+              "Consumer Staples": 17,
+              "Financials": 20
+            }
+          },
+          "frontier": {
+            "mean_of_common_sector_means": 0.3922840607388702,
+            "population_sd_across_common_sector_means": 0.07646317645104443,
+            "sector_means": {
+              "Materials": 0.528251830816603,
+              "Industrials": 0.31865769443599884,
+              "Consumer Discretionary": 0.3443512560712193,
+              "Consumer Staples": 0.34684592262164016,
+              "Financials": 0.42331359974888993
+            },
+            "country_counts_by_sector": {
+              "Materials": 4,
+              "Industrials": 3,
+              "Consumer Discretionary": 2,
+              "Consumer Staples": 2,
+              "Financials": 10
+            }
+          }
+        },
+        "2020-2021": {
+          "developed": {
+            "mean_of_common_sector_means": 0.764494774983833,
+            "population_sd_across_common_sector_means": 0.016175025996357343,
+            "sector_means": {
+              "Materials": 0.7410880600436683,
+              "Industrials": 0.751918554456218,
+              "Consumer Discretionary": 0.7658517389073141,
+              "Consumer Staples": 0.7824407690821246,
+              "Financials": 0.78117475242984
+            },
+            "country_counts_by_sector": {
+              "Materials": 15,
+              "Industrials": 21,
+              "Consumer Discretionary": 18,
+              "Consumer Staples": 16,
+              "Financials": 17
+            }
+          },
+          "emerging": {
+            "mean_of_common_sector_means": 0.7301678858466548,
+            "population_sd_across_common_sector_means": 0.045081894661167084,
+            "sector_means": {
+              "Materials": 0.675198084356373,
+              "Industrials": 0.77195900359084,
+              "Consumer Discretionary": 0.7165202669138107,
+              "Consumer Staples": 0.6943487978872356,
+              "Financials": 0.792813276485015
+            },
+            "country_counts_by_sector": {
+              "Materials": 19,
+              "Industrials": 19,
+              "Consumer Discretionary": 17,
+              "Consumer Staples": 18,
+              "Financials": 20
+            }
+          },
+          "frontier": {
+            "mean_of_common_sector_means": 0.7436141743387962,
+            "population_sd_across_common_sector_means": 0.06995010825578463,
+            "sector_means": {
+              "Materials": 0.8473349735143287,
+              "Industrials": 0.6311616293583987,
+              "Consumer Discretionary": 0.7399105811603979,
+              "Consumer Staples": 0.7278037510787271,
+              "Financials": 0.7718599365821286
+            },
+            "country_counts_by_sector": {
+              "Materials": 3,
+              "Industrials": 6,
+              "Consumer Discretionary": 5,
+              "Consumer Staples": 3,
+              "Financials": 8
+            }
+          }
+        },
+        "2022-2025": {
+          "developed": {
+            "mean_of_common_sector_means": 0.8215682439122926,
+            "population_sd_across_common_sector_means": 0.014969495571874884,
+            "sector_means": {
+              "Materials": 0.8392550915482528,
+              "Industrials": 0.801573244721634,
+              "Consumer Discretionary": 0.837382359386951,
+              "Consumer Staples": 0.8090484327758788,
+              "Financials": 0.8205820911287458
+            },
+            "country_counts_by_sector": {
+              "Materials": 15,
+              "Industrials": 21,
+              "Consumer Discretionary": 15,
+              "Consumer Staples": 16,
+              "Financials": 17
+            }
+          },
+          "emerging": {
+            "mean_of_common_sector_means": 0.8160579885120619,
+            "population_sd_across_common_sector_means": 0.016069205012948222,
+            "sector_means": {
+              "Materials": 0.8343304226518111,
+              "Industrials": 0.8019961047364786,
+              "Consumer Discretionary": 0.7963817323566776,
+              "Consumer Staples": 0.8125496395162193,
+              "Financials": 0.8350320432991228
+            },
+            "country_counts_by_sector": {
+              "Materials": 18,
+              "Industrials": 19,
+              "Consumer Discretionary": 17,
+              "Consumer Staples": 17,
+              "Financials": 20
+            }
+          },
+          "frontier": {
+            "mean_of_common_sector_means": 0.691112709711649,
+            "population_sd_across_common_sector_means": 0.02981252060751938,
+            "sector_means": {
+              "Materials": 0.6952775776197876,
+              "Industrials": 0.6507801233374346,
+              "Consumer Discretionary": 0.7344242578507909,
+              "Consumer Staples": 0.6663457373954221,
+              "Financials": 0.7087358523548094
+            },
+            "country_counts_by_sector": {
+              "Materials": 7,
+              "Industrials": 8,
+              "Consumer Discretionary": 7,
+              "Consumer Staples": 5,
+              "Financials": 11
+            }
+          }
+        }
+      }
+    }
+  },
+  "representative_benchmark_indices": [
+    {
+      "classification_group": "developed",
+      "country_iso3": "USA",
+      "country": "United States",
+      "broad_market_index": "S&P 500",
+      "official_source": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/"
+    },
+    {
+      "classification_group": "developed",
+      "country_iso3": "CAN",
+      "country": "Canada",
+      "broad_market_index": "S&P/TSX Composite",
+      "official_source": "https://www.tsx.com/en/listings/tsx-and-tsxv-issuer-resources/tsx-issuer-resources/sp-tsx-index-eligibility"
+    },
+    {
+      "classification_group": "developed",
+      "country_iso3": "JPN",
+      "country": "Japan",
+      "broad_market_index": "TOPIX",
+      "official_source": "https://www.jpx.co.jp/english/markets/indices/topix/"
+    },
+    {
+      "classification_group": "emerging",
+      "country_iso3": "IND",
+      "country": "India",
+      "broad_market_index": "NIFTY 50",
+      "official_source": "https://www.nseindia.com/static/products-services/indices-nifty50-index"
+    },
+    {
+      "classification_group": "emerging",
+      "country_iso3": "BRA",
+      "country": "Brazil",
+      "broad_market_index": "Ibovespa",
+      "official_source": "https://www.b3.com.br/en_us/market-data-and-indices/indices/broad-indices/ibovespa.htm"
+    },
+    {
+      "classification_group": "emerging",
+      "country_iso3": "ZAF",
+      "country": "South Africa",
+      "broad_market_index": "FTSE/JSE All Share",
+      "official_source": "https://www.jse.co.za/headline"
+    },
+    {
+      "classification_group": "frontier",
+      "country_iso3": "VNM",
+      "country": "Vietnam",
+      "broad_market_index": "VN-Index",
+      "official_source": "https://ssc.gov.vn/webcenter/portal/ssc/pages_r/l/chitit?dDocName=APPSSCGOVVN1620162951"
+    },
+    {
+      "classification_group": "frontier",
+      "country_iso3": "PAK",
+      "country": "Pakistan",
+      "broad_market_index": "KSE-100",
+      "official_source": "https://www.psx.com.pk/psx/product-and-services/indices"
+    },
+    {
+      "classification_group": "frontier",
+      "country_iso3": "MAR",
+      "country": "Morocco",
+      "broad_market_index": "MASI",
+      "official_source": "https://www.casablanca-bourse.com/en/live-market/indices"
+    }
+  ]
+}

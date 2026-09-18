@@ -1,0 +1,10 @@
+market_class,country_iso3,country,broad_market_index,official_source
+developed,USA,United States,S&P 500,https://www.spglobal.com/spdji/en/indices/equity/sp-500/
+developed,CAN,Canada,S&P/TSX Composite,https://www.tsx.com/en/listings/tsx-and-tsxv-issuer-resources/tsx-issuer-resources/sp-tsx-index-eligibility
+developed,JPN,Japan,TOPIX,https://www.jpx.co.jp/english/markets/indices/topix/
+emerging,IND,India,NIFTY 50,https://www.nseindia.com/static/products-services/indices-nifty50-index
+emerging,BRA,Brazil,Ibovespa,https://www.b3.com.br/en_us/market-data-and-indices/indices/broad-indices/ibovespa.htm
+emerging,ZAF,South Africa,FTSE/JSE All Share,https://www.jse.co.za/headline
+frontier,VNM,Vietnam,VN-Index,https://ssc.gov.vn/webcenter/portal/ssc/pages_r/l/chitit?dDocName=APPSSCGOVVN1620162951
+frontier,PAK,Pakistan,KSE-100,https://www.psx.com.pk/psx/product-and-services/indices
+frontier,MAR,Morocco,MASI,https://www.casablanca-bourse.com/en/live-market/indices
