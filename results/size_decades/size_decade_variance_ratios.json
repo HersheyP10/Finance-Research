@@ -1,0 +1,1253 @@
+{
+  "source": "Kenneth R. French Data Library, Portfolios Formed on Size",
+  "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_port_form_sz.html",
+  "download_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Portfolios_Formed_on_ME_Daily_CSV.zip",
+  "source_archive": "data/size_portfolios_me_daily.csv.zip",
+  "source_archive_sha256": "11428d0230fb6594de28099735f944ae40f4c01e3f5fa22a081af43ed01d06e7",
+  "source_vintage": "202607 CRSP database",
+  "retrieved_date": "2026-09-22",
+  "portfolio_definition": {
+    "small": "Bottom 30% by market equity using NYSE breakpoints",
+    "large": "Top 30% by market equity using NYSE breakpoints",
+    "construction": "Value-weighted portfolios formed at the end of each June; includes eligible NYSE, AMEX, and NASDAQ stocks"
+  },
+  "return_type": "Daily value-weighted total returns converted from percentage simple returns to log returns",
+  "method": "Lo-MacKinlay variance ratio with drift, overlapping returns, finite-sample debiasing, and heteroskedasticity-robust inference",
+  "horizons_trading_days": [
+    2,
+    5,
+    10,
+    20
+  ],
+  "score": "1 - mean(abs(VR(q)-1)) across q=2,5,10,20; higher means closer to the random-walk variance restriction",
+  "periods": [
+    {
+      "decade": "1960s",
+      "requested_start": "1960-01-01",
+      "requested_end": "1969-12-31",
+      "first_return_date": "1960-01-04",
+      "last_return_date": "1969-12-31",
+      "daily_returns": 2489,
+      "portfolios": [
+        {
+          "portfolio": "small",
+          "source_column": "Lo 30",
+          "variance_ratios": {
+            "2": 1.3281840958276694,
+            "5": 1.7100733177309337,
+            "10": 2.1429460420580067,
+            "20": 2.640617288325704
+          },
+          "mean_variance_ratio": 1.9554551859855782,
+          "population_sd_across_variance_ratios": 0.4894591937562171,
+          "sample_sd_across_variance_ratios": 0.5651787945449782,
+          "mean_absolute_vr_distance": 0.9554551859855784,
+          "closeness_score": 0.04454481401442156,
+          "annualized_log_return_volatility": 0.11491905892064394,
+          "tests": [
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.3281840958276692,
+              "robust_z": 9.804852276862393,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.7100733177309335,
+              "robust_z": 9.118613677709419,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 10,
+              "variance_ratio": 2.142946042058006,
+              "robust_z": 10.005411100956216,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 20,
+              "variance_ratio": 2.6406172883257035,
+              "robust_z": 10.567424639350108,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            }
+          ]
+        },
+        {
+          "portfolio": "large",
+          "source_column": "Hi 30",
+          "variance_ratios": {
+            "2": 1.1789974647419013,
+            "5": 1.3234261675626215,
+            "10": 1.4592727552178493,
+            "20": 1.5330042101625148
+          },
+          "mean_variance_ratio": 1.3736751494212218,
+          "population_sd_across_variance_ratios": 0.13521932258810532,
+          "sample_sd_across_variance_ratios": 0.1561378245917629,
+          "mean_absolute_vr_distance": 0.3736751494212217,
+          "closeness_score": 0.6263248505787783,
+          "annualized_log_return_volatility": 0.09898970418417997,
+          "tests": [
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.1789974647419015,
+              "robust_z": 3.3150100646913923,
+              "robust_p": 0.0009163982508924029,
+              "holm_p_within_decade_eight_tests": 0.0036655930035696116,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.027491947526772087,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.3234261675626215,
+              "robust_z": 3.1556117737596696,
+              "robust_p": 0.001601618859801368,
+              "holm_p_within_decade_eight_tests": 0.0036655930035696116,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.04324370921463694,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 10,
+              "variance_ratio": 1.4592727552178493,
+              "robust_z": 3.2603928770955846,
+              "robust_p": 0.0011125798529776354,
+              "holm_p_within_decade_eight_tests": 0.0036655930035696116,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.03115223588337379,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 20,
+              "variance_ratio": 1.533004210162515,
+              "robust_z": 2.870263636180627,
+              "robust_p": 0.00410129693006378,
+              "holm_p_within_decade_eight_tests": 0.00410129693006378,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.1025324232515945,
+              "reject_5pct_holm_all_tests": false
+            }
+          ]
+        }
+      ],
+      "comparison": {
+        "large_minus_small_score": 0.5817800365643567,
+        "closer_point_estimate": "large",
+        "inference_main": {
+          "decade": "1960s",
+          "large_minus_small_score": 0.5817800365643567,
+          "stationary_bootstrap_standard_error": 0.08228234499502919,
+          "wald_z": 7.070533011662501,
+          "two_sided_p": 1.543397121602372e-12,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20260962,
+          "holm_p_across_six_decades": 6.173588486409488e-12,
+          "familywise_95pct_simultaneous_interval": [
+            0.3646980414024976,
+            0.7988620317262158
+          ],
+          "reject_equal_scores_holm_5pct": true
+        }
+      }
+    },
+    {
+      "decade": "1970s",
+      "requested_start": "1970-01-01",
+      "requested_end": "1979-12-31",
+      "first_return_date": "1970-01-02",
+      "last_return_date": "1979-12-31",
+      "daily_returns": 2526,
+      "portfolios": [
+        {
+          "portfolio": "small",
+          "source_column": "Lo 30",
+          "variance_ratios": {
+            "2": 1.4517997989565534,
+            "5": 2.055863351435131,
+            "10": 2.6773542526262673,
+            "20": 3.419949913059643
+          },
+          "mean_variance_ratio": 2.4012418290193986,
+          "population_sd_across_variance_ratios": 0.7305358807388052,
+          "sample_sd_across_variance_ratios": 0.843550174794459,
+          "mean_absolute_vr_distance": 1.4012418290193986,
+          "closeness_score": -0.40124182901939864,
+          "annualized_log_return_volatility": 0.1339528872809891,
+          "tests": [
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.451799798956553,
+              "robust_z": 12.064142680244066,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 5,
+              "variance_ratio": 2.0558633514351294,
+              "robust_z": 13.3877565507518,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 10,
+              "variance_ratio": 2.6773542526262655,
+              "robust_z": 14.553615994730135,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 20,
+              "variance_ratio": 3.4199499130596407,
+              "robust_z": 15.387052636090102,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            }
+          ]
+        },
+        {
+          "portfolio": "large",
+          "source_column": "Hi 30",
+          "variance_ratios": {
+            "2": 1.2603334014080703,
+            "5": 1.4290076718094598,
+            "10": 1.3991471579470303,
+            "20": 1.4415619590262645
+          },
+          "mean_variance_ratio": 1.3825125475477062,
+          "population_sd_across_variance_ratios": 0.0722029839941325,
+          "sample_sd_across_variance_ratios": 0.08337282449061327,
+          "mean_absolute_vr_distance": 0.38251254754770625,
+          "closeness_score": 0.6174874524522938,
+          "annualized_log_return_volatility": 0.1358064695747687,
+          "tests": [
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.2603334014080703,
+              "robust_z": 9.493967954209044,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.4290076718094595,
+              "robust_z": 7.108197244180964,
+              "robust_p": 1.1757261830780408e-12,
+              "holm_p_within_decade_eight_tests": 3.5271785492341223e-12,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 4.115041640773143e-11,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 10,
+              "variance_ratio": 1.3991471579470298,
+              "robust_z": 4.325505045424283,
+              "robust_p": 1.5218278521800244e-05,
+              "holm_p_within_decade_eight_tests": 3.0436557043600487e-05,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0004869849126976078,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 20,
+              "variance_ratio": 1.4415619590262645,
+              "robust_z": 3.288674773191908,
+              "robust_p": 0.001006602658657041,
+              "holm_p_within_decade_eight_tests": 0.001006602658657041,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.029191477101054186,
+              "reject_5pct_holm_all_tests": true
+            }
+          ]
+        }
+      ],
+      "comparison": {
+        "large_minus_small_score": 1.0187292814716924,
+        "closer_point_estimate": "large",
+        "inference_main": {
+          "decade": "1970s",
+          "large_minus_small_score": 1.0187292814716924,
+          "stationary_bootstrap_standard_error": 0.1183603614977061,
+          "wald_z": 8.607013940992703,
+          "two_sided_p": 7.498833011437366e-18,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20261962,
+          "holm_p_across_six_decades": 4.49929980686242e-17,
+          "familywise_95pct_simultaneous_interval": [
+            0.7064641968590317,
+            1.330994366084353
+          ],
+          "reject_equal_scores_holm_5pct": true
+        }
+      }
+    },
+    {
+      "decade": "1980s",
+      "requested_start": "1980-01-01",
+      "requested_end": "1989-12-31",
+      "first_return_date": "1980-01-02",
+      "last_return_date": "1989-12-29",
+      "daily_returns": 2528,
+      "portfolios": [
+        {
+          "portfolio": "small",
+          "source_column": "Lo 30",
+          "variance_ratios": {
+            "2": 1.2992577646231547,
+            "5": 1.6871481123263419,
+            "10": 2.155132241141685,
+            "20": 2.586353505105924
+          },
+          "mean_variance_ratio": 1.9319729057992765,
+          "population_sd_across_variance_ratios": 0.48432470695597846,
+          "sample_sd_across_variance_ratios": 0.5592499998724416,
+          "mean_absolute_vr_distance": 0.9319729057992764,
+          "closeness_score": 0.06802709420072361,
+          "annualized_log_return_volatility": 0.12485096300457077,
+          "tests": [
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.299257764623162,
+              "robust_z": 3.0941719902579723,
+              "robust_p": 0.001973630370755375,
+              "holm_p_within_decade_eight_tests": 0.009868151853776874,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.051314389639639746,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.6871481123263512,
+              "robust_z": 3.7052248755384865,
+              "robust_p": 0.00021120326960821778,
+              "holm_p_within_decade_eight_tests": 0.0012672196176493067,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.006547301357854751,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 10,
+              "variance_ratio": 2.1551322411416973,
+              "robust_z": 4.525883255518273,
+              "robust_p": 6.014377667451498e-06,
+              "holm_p_within_decade_eight_tests": 4.210064367216049e-05,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.00019847446302589944,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 20,
+              "variance_ratio": 2.5863535051059383,
+              "robust_z": 4.984561355032419,
+              "robust_p": 6.210253760130513e-07,
+              "holm_p_within_decade_eight_tests": 4.96820300810441e-06,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 2.1114862784443744e-05,
+              "reject_5pct_holm_all_tests": true
+            }
+          ]
+        },
+        {
+          "portfolio": "large",
+          "source_column": "Hi 30",
+          "variance_ratios": {
+            "2": 1.0761528020083246,
+            "5": 1.0359623723571485,
+            "10": 1.050330561841537,
+            "20": 1.0031995620877745
+          },
+          "mean_variance_ratio": 1.0414113245736962,
+          "population_sd_across_variance_ratios": 0.026345554275434932,
+          "sample_sd_across_variance_ratios": 0.030421225705744508,
+          "mean_absolute_vr_distance": 0.04141132457369623,
+          "closeness_score": 0.9585886754263038,
+          "annualized_log_return_volatility": 0.16844827603314197,
+          "tests": [
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.0761528020083253,
+              "robust_z": 1.3991219764953733,
+              "robust_p": 0.1617764085683584,
+              "holm_p_within_decade_eight_tests": 0.6471056342734336,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.0359623723571487,
+              "robust_z": 0.28230040860494576,
+              "robust_p": 0.7777131722910238,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 10,
+              "variance_ratio": 1.0503305618415377,
+              "robust_z": 0.27296434026130073,
+              "robust_p": 0.7848806273114803,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 20,
+              "variance_ratio": 1.003199562087775,
+              "robust_z": 0.01352461297438427,
+              "robust_p": 0.9892092490832223,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            }
+          ]
+        }
+      ],
+      "comparison": {
+        "large_minus_small_score": 0.8905615812255802,
+        "closer_point_estimate": "large",
+        "inference_main": {
+          "decade": "1980s",
+          "large_minus_small_score": 0.8905615812255802,
+          "stationary_bootstrap_standard_error": 0.11775679202745068,
+          "wald_z": 7.562719448216442,
+          "two_sided_p": 3.9472838043341856e-14,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20262962,
+          "holm_p_across_six_decades": 1.9736419021670927e-13,
+          "familywise_95pct_simultaneous_interval": [
+            0.5798888681578693,
+            1.201234294293291
+          ],
+          "reject_equal_scores_holm_5pct": true
+        }
+      }
+    },
+    {
+      "decade": "1990s",
+      "requested_start": "1990-01-01",
+      "requested_end": "1999-12-31",
+      "first_return_date": "1990-01-02",
+      "last_return_date": "1999-12-31",
+      "daily_returns": 2528,
+      "portfolios": [
+        {
+          "portfolio": "small",
+          "source_column": "Lo 30",
+          "variance_ratios": {
+            "2": 1.27846515129841,
+            "5": 1.6946674377102606,
+            "10": 2.09215414270983,
+            "20": 2.574012282196258
+          },
+          "mean_variance_ratio": 1.9098247534786899,
+          "population_sd_across_variance_ratios": 0.47939980633998697,
+          "sample_sd_across_variance_ratios": 0.5535632144796919,
+          "mean_absolute_vr_distance": 0.9098247534786896,
+          "closeness_score": 0.09017524652131037,
+          "annualized_log_return_volatility": 0.11417008876817113,
+          "tests": [
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.2784651512984107,
+              "robust_z": 8.408834204378156,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.6946674377102608,
+              "robust_z": 9.152520893308436,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 10,
+              "variance_ratio": 2.092154142709831,
+              "robust_z": 9.792274836917997,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 20,
+              "variance_ratio": 2.574012282196258,
+              "robust_z": 10.387622584659624,
+              "robust_p": 0.0,
+              "holm_p_within_decade_eight_tests": 0.0,
+              "reject_5pct_holm_within_decade": true,
+              "holm_p_all_48_tests": 0.0,
+              "reject_5pct_holm_all_tests": true
+            }
+          ]
+        },
+        {
+          "portfolio": "large",
+          "source_column": "Hi 30",
+          "variance_ratios": {
+            "2": 1.0436374617002455,
+            "5": 1.0221029495279887,
+            "10": 0.908949349185724,
+            "20": 0.8747436363579714
+          },
+          "mean_variance_ratio": 0.9623583491929825,
+          "population_sd_across_variance_ratios": 0.07194541435368683,
+          "sample_sd_across_variance_ratios": 0.08307540868812052,
+          "mean_absolute_vr_distance": 0.07051185642113467,
+          "closeness_score": 0.9294881435788653,
+          "annualized_log_return_volatility": 0.13914680479178523,
+          "tests": [
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 2,
+              "variance_ratio": 1.0436374617002449,
+              "robust_z": 1.4000485393741415,
+              "robust_p": 0.16149878360646497,
+              "holm_p_within_decade_eight_tests": 0.6459951344258599,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.022102949527988,
+              "robust_z": 0.33999618758355454,
+              "robust_p": 0.7338593989627409,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 10,
+              "variance_ratio": 0.9089493491857236,
+              "robust_z": -0.9426642795139082,
+              "robust_p": 0.345852649732165,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 20,
+              "variance_ratio": 0.8747436363579706,
+              "robust_z": -0.917875801391313,
+              "robust_p": 0.3586838917575137,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            }
+          ]
+        }
+      ],
+      "comparison": {
+        "large_minus_small_score": 0.839312897057555,
+        "closer_point_estimate": "large",
+        "inference_main": {
+          "decade": "1990s",
+          "large_minus_small_score": 0.839312897057555,
+          "stationary_bootstrap_standard_error": 0.14680725601242087,
+          "wald_z": 5.717107722431264,
+          "two_sided_p": 1.0835243349110787e-08,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20263962,
+          "holm_p_across_six_decades": 3.250573004733236e-08,
+          "familywise_95pct_simultaneous_interval": [
+            0.45199758608362217,
+            1.2266282080314879
+          ],
+          "reject_equal_scores_holm_5pct": true
+        }
+      }
+    },
+    {
+      "decade": "2000s",
+      "requested_start": "2000-01-01",
+      "requested_end": "2009-12-31",
+      "first_return_date": "2000-01-03",
+      "last_return_date": "2009-12-31",
+      "daily_returns": 2515,
+      "portfolios": [
+        {
+          "portfolio": "small",
+          "source_column": "Lo 30",
+          "variance_ratios": {
+            "2": 0.9929515870656539,
+            "5": 1.0286394273082666,
+            "10": 1.0654223061221173,
+            "20": 1.164967330114879
+          },
+          "mean_variance_ratio": 1.0629951626527292,
+          "population_sd_across_variance_ratios": 0.06420792979537422,
+          "sample_sd_across_variance_ratios": 0.07414093110293579,
+          "mean_absolute_vr_distance": 0.0665193691199023,
+          "closeness_score": 0.9334806308800977,
+          "annualized_log_return_volatility": 0.24480804650579036,
+          "tests": [
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 2,
+              "variance_ratio": 0.9929515870656538,
+              "robust_z": -0.20312594427112585,
+              "robust_p": 0.8390365938210835,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 5,
+              "variance_ratio": 1.0286394273082664,
+              "robust_z": 0.36019464834143267,
+              "robust_p": 0.7187015765064755,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 10,
+              "variance_ratio": 1.065422306122117,
+              "robust_z": 0.5291862629202123,
+              "robust_p": 0.5966762451661032,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 20,
+              "variance_ratio": 1.164967330114879,
+              "robust_z": 0.9167665978089492,
+              "robust_p": 0.35926495935160263,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            }
+          ]
+        },
+        {
+          "portfolio": "large",
+          "source_column": "Hi 30",
+          "variance_ratios": {
+            "2": 0.9258076265987906,
+            "5": 0.8107091890973436,
+            "10": 0.7397910064349978,
+            "20": 0.7291508391262279
+          },
+          "mean_variance_ratio": 0.8013646653143399,
+          "population_sd_across_variance_ratios": 0.07838928960401867,
+          "sample_sd_across_variance_ratios": 0.09051615490892742,
+          "mean_absolute_vr_distance": 0.19863533468565997,
+          "closeness_score": 0.80136466531434,
+          "annualized_log_return_volatility": 0.22076431468663965,
+          "tests": [
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 2,
+              "variance_ratio": 0.9258076265987901,
+              "robust_z": -2.23247339271514,
+              "robust_p": 0.02558369185451892,
+              "holm_p_within_decade_eight_tests": 0.17908584298163244,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 0.5884249126539352,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 5,
+              "variance_ratio": 0.8107091890973429,
+              "robust_z": -2.3792652991589787,
+              "robust_p": 0.017347185937531817,
+              "holm_p_within_decade_eight_tests": 0.13877748750025454,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 0.4163324625007636,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 10,
+              "variance_ratio": 0.7397910064349973,
+              "robust_z": -2.0729765003602747,
+              "robust_p": 0.03817446661561674,
+              "holm_p_within_decade_eight_tests": 0.22904679969370045,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 0.8398382655435683,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 20,
+              "variance_ratio": 0.7291508391262274,
+              "robust_z": -1.456908428273442,
+              "robust_p": 0.14514165920414746,
+              "holm_p_within_decade_eight_tests": 0.7257082960207373,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            }
+          ]
+        }
+      ],
+      "comparison": {
+        "large_minus_small_score": -0.13211596556575766,
+        "closer_point_estimate": "small",
+        "inference_main": {
+          "decade": "2000s",
+          "large_minus_small_score": -0.13211596556575766,
+          "stationary_bootstrap_standard_error": 0.0924374071713964,
+          "wald_z": -1.42924785115175,
+          "two_sided_p": 0.1529330087534289,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20264962,
+          "holm_p_across_six_decades": 0.1529330087534289,
+          "familywise_95pct_simultaneous_interval": [
+            -0.3759896273770262,
+            0.11175769624551085
+          ],
+          "reject_equal_scores_holm_5pct": false
+        }
+      }
+    },
+    {
+      "decade": "2010s",
+      "requested_start": "2010-01-01",
+      "requested_end": "2019-12-31",
+      "first_return_date": "2010-01-04",
+      "last_return_date": "2019-12-31",
+      "daily_returns": 2516,
+      "portfolios": [
+        {
+          "portfolio": "small",
+          "source_column": "Lo 30",
+          "variance_ratios": {
+            "2": 0.9589118590478297,
+            "5": 0.9518625681840788,
+            "10": 0.8911364088308193,
+            "20": 0.8673226619849678
+          },
+          "mean_variance_ratio": 0.9173083745119239,
+          "population_sd_across_variance_ratios": 0.039078080397783606,
+          "sample_sd_across_variance_ratios": 0.0451234804741484,
+          "mean_absolute_vr_distance": 0.08269162548807607,
+          "closeness_score": 0.9173083745119239,
+          "annualized_log_return_volatility": 0.19996482716764805,
+          "tests": [
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 2,
+              "variance_ratio": 0.9589118590478289,
+              "robust_z": -1.3742444448411544,
+              "robust_p": 0.16936580703114856,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 5,
+              "variance_ratio": 0.9518625681840778,
+              "robust_z": -0.7129409476102074,
+              "robust_p": 0.4758822994260026,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 10,
+              "variance_ratio": 0.8911364088308188,
+              "robust_z": -1.0751564370339488,
+              "robust_p": 0.2823046953939845,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "small",
+              "horizon_trading_days": 20,
+              "variance_ratio": 0.867322661984967,
+              "robust_z": -0.9254380276307935,
+              "robust_p": 0.35473810574346665,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            }
+          ]
+        },
+        {
+          "portfolio": "large",
+          "source_column": "Hi 30",
+          "variance_ratios": {
+            "2": 0.9570095684235593,
+            "5": 0.9109580078181507,
+            "10": 0.7965214360204106,
+            "20": 0.7234714682224656
+          },
+          "mean_variance_ratio": 0.8469901201211466,
+          "population_sd_across_variance_ratios": 0.09219560063109199,
+          "sample_sd_across_variance_ratios": 0.10645830968492037,
+          "mean_absolute_vr_distance": 0.1530098798788535,
+          "closeness_score": 0.8469901201211465,
+          "annualized_log_return_volatility": 0.14806393322982603,
+          "tests": [
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 2,
+              "variance_ratio": 0.957009568423558,
+              "robust_z": -1.3471124959028187,
+              "robust_p": 0.17794400421513012,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 5,
+              "variance_ratio": 0.9109580078181493,
+              "robust_z": -1.2217582748762477,
+              "robust_p": 0.22179905167570557,
+              "holm_p_within_decade_eight_tests": 1.0,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 10,
+              "variance_ratio": 0.7965214360204094,
+              "robust_z": -1.8664505356404841,
+              "robust_p": 0.061978358391952426,
+              "holm_p_within_decade_eight_tests": 0.4958268671356194,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            },
+            {
+              "portfolio": "large",
+              "horizon_trading_days": 20,
+              "variance_ratio": 0.7234714682224644,
+              "robust_z": -1.8162069330664197,
+              "robust_p": 0.06933863497358206,
+              "holm_p_within_decade_eight_tests": 0.4958268671356194,
+              "reject_5pct_holm_within_decade": false,
+              "holm_p_all_48_tests": 1.0,
+              "reject_5pct_holm_all_tests": false
+            }
+          ]
+        }
+      ],
+      "comparison": {
+        "large_minus_small_score": -0.07031825439077743,
+        "closer_point_estimate": "small",
+        "inference_main": {
+          "decade": "2010s",
+          "large_minus_small_score": -0.07031825439077743,
+          "stationary_bootstrap_standard_error": 0.03519581398106039,
+          "wald_z": -1.99791527562389,
+          "two_sided_p": 0.045725846251323705,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20265962,
+          "holm_p_across_six_decades": 0.09145169250264741,
+          "familywise_95pct_simultaneous_interval": [
+            -0.16317386662224473,
+            0.02253735784068986
+          ],
+          "reject_equal_scores_holm_5pct": false
+        }
+      }
+    }
+  ],
+  "large_vs_small_inference": {
+    "quantity": "large-cap closeness score minus small-cap closeness score",
+    "sign": "Positive means the large-cap portfolio is closer to VR=1 across the four horizons.",
+    "method": "Paired stationary block bootstrap of the two daily return series, retaining contemporaneous dependence; Wald inference with Holm p-values and Bonferroni simultaneous intervals across six decades.",
+    "main_mean_block_length": 40,
+    "comparisons_by_mean_block_length": {
+      "40": [
+        {
+          "decade": "1960s",
+          "large_minus_small_score": 0.5817800365643567,
+          "stationary_bootstrap_standard_error": 0.08228234499502919,
+          "wald_z": 7.070533011662501,
+          "two_sided_p": 1.543397121602372e-12,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20260962,
+          "holm_p_across_six_decades": 6.173588486409488e-12,
+          "familywise_95pct_simultaneous_interval": [
+            0.3646980414024976,
+            0.7988620317262158
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1970s",
+          "large_minus_small_score": 1.0187292814716924,
+          "stationary_bootstrap_standard_error": 0.1183603614977061,
+          "wald_z": 8.607013940992703,
+          "two_sided_p": 7.498833011437366e-18,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20261962,
+          "holm_p_across_six_decades": 4.49929980686242e-17,
+          "familywise_95pct_simultaneous_interval": [
+            0.7064641968590317,
+            1.330994366084353
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1980s",
+          "large_minus_small_score": 0.8905615812255802,
+          "stationary_bootstrap_standard_error": 0.11775679202745068,
+          "wald_z": 7.562719448216442,
+          "two_sided_p": 3.9472838043341856e-14,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20262962,
+          "holm_p_across_six_decades": 1.9736419021670927e-13,
+          "familywise_95pct_simultaneous_interval": [
+            0.5798888681578693,
+            1.201234294293291
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1990s",
+          "large_minus_small_score": 0.839312897057555,
+          "stationary_bootstrap_standard_error": 0.14680725601242087,
+          "wald_z": 5.717107722431264,
+          "two_sided_p": 1.0835243349110787e-08,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20263962,
+          "holm_p_across_six_decades": 3.250573004733236e-08,
+          "familywise_95pct_simultaneous_interval": [
+            0.45199758608362217,
+            1.2266282080314879
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "2000s",
+          "large_minus_small_score": -0.13211596556575766,
+          "stationary_bootstrap_standard_error": 0.0924374071713964,
+          "wald_z": -1.42924785115175,
+          "two_sided_p": 0.1529330087534289,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20264962,
+          "holm_p_across_six_decades": 0.1529330087534289,
+          "familywise_95pct_simultaneous_interval": [
+            -0.3759896273770262,
+            0.11175769624551085
+          ],
+          "reject_equal_scores_holm_5pct": false
+        },
+        {
+          "decade": "2010s",
+          "large_minus_small_score": -0.07031825439077743,
+          "stationary_bootstrap_standard_error": 0.03519581398106039,
+          "wald_z": -1.99791527562389,
+          "two_sided_p": 0.045725846251323705,
+          "mean_block_length": 40,
+          "replicates": 4999,
+          "seed": 20265962,
+          "holm_p_across_six_decades": 0.09145169250264741,
+          "familywise_95pct_simultaneous_interval": [
+            -0.16317386662224473,
+            0.02253735784068986
+          ],
+          "reject_equal_scores_holm_5pct": false
+        }
+      ],
+      "20": [
+        {
+          "decade": "1960s",
+          "large_minus_small_score": 0.5817800365643567,
+          "stationary_bootstrap_standard_error": 0.08778859321858246,
+          "wald_z": 6.627057288818814,
+          "two_sided_p": 3.424447581594857e-11,
+          "mean_block_length": 20,
+          "replicates": 2499,
+          "seed": 20260942,
+          "holm_p_across_six_decades": 1.3697790326379427e-10,
+          "familywise_95pct_simultaneous_interval": [
+            0.35017114197713983,
+            0.8133889311515736
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1970s",
+          "large_minus_small_score": 1.0187292814716924,
+          "stationary_bootstrap_standard_error": 0.11643871930532837,
+          "wald_z": 8.749059484245583,
+          "two_sided_p": 2.1513824267346124e-18,
+          "mean_block_length": 20,
+          "replicates": 2499,
+          "seed": 20261942,
+          "holm_p_across_six_decades": 1.2908294560407675e-17,
+          "familywise_95pct_simultaneous_interval": [
+            0.711533983350092,
+            1.3259245795932928
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1980s",
+          "large_minus_small_score": 0.8905615812255802,
+          "stationary_bootstrap_standard_error": 0.13030195111374757,
+          "wald_z": 6.834598972721146,
+          "two_sided_p": 8.223474561820741e-12,
+          "mean_block_length": 20,
+          "replicates": 2499,
+          "seed": 20262942,
+          "holm_p_across_six_decades": 4.111737280910371e-11,
+          "familywise_95pct_simultaneous_interval": [
+            0.5467915109515236,
+            1.2343316514996368
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1990s",
+          "large_minus_small_score": 0.839312897057555,
+          "stationary_bootstrap_standard_error": 0.14396759840922088,
+          "wald_z": 5.8298735710784655,
+          "two_sided_p": 5.546938569026708e-09,
+          "mean_block_length": 20,
+          "replicates": 2499,
+          "seed": 20263942,
+          "holm_p_across_six_decades": 1.6640815707080122e-08,
+          "familywise_95pct_simultaneous_interval": [
+            0.4594893334094481,
+            1.2191364607056618
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "2000s",
+          "large_minus_small_score": -0.13211596556575766,
+          "stationary_bootstrap_standard_error": 0.08784049937941296,
+          "wald_z": -1.5040438806603764,
+          "two_sided_p": 0.13257006856136697,
+          "mean_block_length": 20,
+          "replicates": 2499,
+          "seed": 20264942,
+          "holm_p_across_six_decades": 0.13257006856136697,
+          "familywise_95pct_simultaneous_interval": [
+            -0.36386180195932394,
+            0.09962987082780861
+          ],
+          "reject_equal_scores_holm_5pct": false
+        },
+        {
+          "decade": "2010s",
+          "large_minus_small_score": -0.07031825439077743,
+          "stationary_bootstrap_standard_error": 0.0357473444333793,
+          "wald_z": -1.9670902973457616,
+          "two_sided_p": 0.04917280164553799,
+          "mean_block_length": 20,
+          "replicates": 2499,
+          "seed": 20265942,
+          "holm_p_across_six_decades": 0.09834560329107599,
+          "familywise_95pct_simultaneous_interval": [
+            -0.164628945849619,
+            0.023992437068064143
+          ],
+          "reject_equal_scores_holm_5pct": false
+        }
+      ],
+      "60": [
+        {
+          "decade": "1960s",
+          "large_minus_small_score": 0.5817800365643567,
+          "stationary_bootstrap_standard_error": 0.07439815639173689,
+          "wald_z": 7.819817919963575,
+          "two_sided_p": 5.289979736621322e-15,
+          "mean_block_length": 60,
+          "replicates": 2499,
+          "seed": 20260982,
+          "holm_p_across_six_decades": 2.115991894648529e-14,
+          "familywise_95pct_simultaneous_interval": [
+            0.38549855933059607,
+            0.7780615137981174
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1970s",
+          "large_minus_small_score": 1.0187292814716924,
+          "stationary_bootstrap_standard_error": 0.1211205241426359,
+          "wald_z": 8.410872465115823,
+          "two_sided_p": 4.069720491865509e-17,
+          "mean_block_length": 60,
+          "replicates": 2499,
+          "seed": 20261982,
+          "holm_p_across_six_decades": 2.4418322951193054e-16,
+          "familywise_95pct_simultaneous_interval": [
+            0.6991821776850669,
+            1.338276385258318
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1980s",
+          "large_minus_small_score": 0.8905615812255802,
+          "stationary_bootstrap_standard_error": 0.11181246013122163,
+          "wald_z": 7.964779418862878,
+          "two_sided_p": 1.6551876472139204e-15,
+          "mean_block_length": 60,
+          "replicates": 2499,
+          "seed": 20262982,
+          "holm_p_across_six_decades": 8.275938236069601e-15,
+          "familywise_95pct_simultaneous_interval": [
+            0.5955715450190555,
+            1.1855516174321048
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "1990s",
+          "large_minus_small_score": 0.839312897057555,
+          "stationary_bootstrap_standard_error": 0.14735145500669297,
+          "wald_z": 5.69599327688642,
+          "two_sided_p": 1.2265571065964897e-08,
+          "mean_block_length": 60,
+          "replicates": 2499,
+          "seed": 20263982,
+          "holm_p_across_six_decades": 3.679671319789469e-08,
+          "familywise_95pct_simultaneous_interval": [
+            0.450561849128765,
+            1.2280639449863449
+          ],
+          "reject_equal_scores_holm_5pct": true
+        },
+        {
+          "decade": "2000s",
+          "large_minus_small_score": -0.13211596556575766,
+          "stationary_bootstrap_standard_error": 0.09737799974924895,
+          "wald_z": -1.356733203659553,
+          "two_sided_p": 0.174865998239289,
+          "mean_block_length": 60,
+          "replicates": 2499,
+          "seed": 20264982,
+          "holm_p_across_six_decades": 0.174865998239289,
+          "familywise_95pct_simultaneous_interval": [
+            -0.3890241816808309,
+            0.12479225054931559
+          ],
+          "reject_equal_scores_holm_5pct": false
+        },
+        {
+          "decade": "2010s",
+          "large_minus_small_score": -0.07031825439077743,
+          "stationary_bootstrap_standard_error": 0.035154195239941025,
+          "wald_z": -2.0002805898649667,
+          "two_sided_p": 0.04546997376064924,
+          "mean_block_length": 60,
+          "replicates": 2499,
+          "seed": 20265982,
+          "holm_p_across_six_decades": 0.09093994752129848,
+          "familywise_95pct_simultaneous_interval": [
+            -0.1630640656757736,
+            0.022427556894218742
+          ],
+          "reject_equal_scores_holm_5pct": false
+        }
+      ]
+    }
+  },
+  "validation": "All 48 variance ratios, robust Z statistics, and p-values match an independent scalar implementation (rtol=1e-10, atol=1e-12).",
+  "interpretation_limit": "Closeness to VR=1 is evidence about one random-walk implication, not a complete measure of market efficiency or investable predictability."
+}
