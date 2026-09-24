@@ -1,0 +1,253 @@
+{
+  "question": "Does large-cap return at t help predict small-cap return at t+1?",
+  "source": "Kenneth R. French Data Library, Portfolios Formed on Size",
+  "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_port_form_sz.html",
+  "source_archive": "data/size_portfolios_me_daily.csv.zip",
+  "source_archive_sha256": "11428d0230fb6594de28099735f944ae40f4c01e3f5fa22a081af43ed01d06e7",
+  "portfolio_definition": {
+    "small": "Value-weighted bottom 30% by market equity using NYSE breakpoints",
+    "large": "Value-weighted top 30% by market equity using NYSE breakpoints"
+  },
+  "return_type": "Daily total returns converted from percentage simple returns to log returns",
+  "main_model": "small(t+1) = intercept + phi*small(t) + beta*large(t) + error(t+1)",
+  "null_hypothesis": "beta = 0",
+  "inference": {
+    "covariance": "Newey-West HAC with Bartlett kernel",
+    "hac_max_lags": 5,
+    "individual_test": "Two-sided asymptotic z test",
+    "multiple_testing": "Holm adjustment across the six decade tests",
+    "familywise_interval": "Bonferroni simultaneous 95% interval across six decades",
+    "familywise_normal_critical_value": 2.638257273476751
+  },
+  "periods": [
+    {
+      "decade": "1960s",
+      "first_return_date": "1960-01-04",
+      "last_return_date": "1969-12-31",
+      "regression_observations": 2488,
+      "large_t_to_small_t_plus_1": {
+        "predictor_coefficient": 0.2020886762141933,
+        "hac_standard_error": 0.09927869764336014,
+        "z_statistic": 2.0355693719931587,
+        "two_sided_p_value": 0.04179361592920765,
+        "target_own_lag_coefficient": 0.1842604407839838,
+        "intercept": 0.0004092936758994536,
+        "full_model_r_squared": 0.11717643956078383,
+        "restricted_model_r_squared": 0.1074749399324596,
+        "incremental_r_squared": 0.009701499628324228,
+        "standardized_predictor_coefficient": 0.17410365725708427,
+        "holm_p_value_across_decades": 0.1671744637168306,
+        "reject_zero_holm_5pct": false,
+        "familywise_95pct_bonferroni_interval": [
+          -0.05983406994470075,
+          0.46401142237308735
+        ]
+      },
+      "small_t_to_large_t_plus_1_diagnostic": {
+        "predictor_coefficient": -0.024421375601539928,
+        "hac_standard_error": 0.04209778087808938,
+        "z_statistic": -0.5801107586231585,
+        "two_sided_p_value": 0.5618399290236418,
+        "target_own_lag_coefficient": 0.2016207479420124,
+        "intercept": 0.000251386856624608,
+        "full_model_r_squared": 0.03202000077042899,
+        "restricted_model_r_squared": 0.03176286630841785,
+        "incremental_r_squared": 0.00025713446201114376,
+        "standardized_predictor_coefficient": -0.0283444870169121,
+        "holm_p_value_across_decades": 1.0,
+        "reject_zero_holm_5pct": false
+      }
+    },
+    {
+      "decade": "1970s",
+      "first_return_date": "1970-01-02",
+      "last_return_date": "1979-12-31",
+      "regression_observations": 2525,
+      "large_t_to_small_t_plus_1": {
+        "predictor_coefficient": 0.10699784779101715,
+        "hac_standard_error": 0.03391873542755462,
+        "z_statistic": 3.154535286834282,
+        "two_sided_p_value": 0.0016075393707861833,
+        "target_own_lag_coefficient": 0.36618448790272934,
+        "intercept": 0.00017701489588147168,
+        "full_model_r_squared": 0.21141374231776222,
+        "restricted_model_r_squared": 0.2073136576249952,
+        "incremental_r_squared": 0.004100084692767014,
+        "standardized_predictor_coefficient": 0.1088224141365458,
+        "holm_p_value_across_decades": 0.008037696853930916,
+        "reject_zero_holm_5pct": true,
+        "familywise_95pct_bonferroni_interval": [
+          0.01751149734213761,
+          0.19648419823989668
+        ]
+      },
+      "small_t_to_large_t_plus_1_diagnostic": {
+        "predictor_coefficient": -0.06821028080283638,
+        "hac_standard_error": 0.03764594047005782,
+        "z_statistic": -1.8118894082906043,
+        "two_sided_p_value": 0.07000328630687015,
+        "target_own_lag_coefficient": 0.31397886953263515,
+        "intercept": 0.00016251944410255607,
+        "full_model_r_squared": 0.0689838136097094,
+        "restricted_model_r_squared": 0.06741601802310315,
+        "incremental_r_squared": 0.0015677955866062465,
+        "standardized_predictor_coefficient": -0.06729249966982774,
+        "holm_p_value_across_decades": 0.35001643153435075,
+        "reject_zero_holm_5pct": false
+      }
+    },
+    {
+      "decade": "1980s",
+      "first_return_date": "1980-01-02",
+      "last_return_date": "1989-12-29",
+      "regression_observations": 2527,
+      "large_t_to_small_t_plus_1": {
+        "predictor_coefficient": 0.28795085739188575,
+        "hac_standard_error": 0.08414709832311375,
+        "z_statistic": 3.421993902703483,
+        "two_sided_p_value": 0.0006216370762695881,
+        "target_own_lag_coefficient": 0.012435774550640353,
+        "intercept": 0.0003229772186956411,
+        "full_model_r_squared": 0.15856098593292423,
+        "restricted_model_r_squared": 0.090128084936547,
+        "incremental_r_squared": 0.06843290099637722,
+        "standardized_predictor_coefficient": 0.388900774592228,
+        "holm_p_value_across_decades": 0.0037298224576175283,
+        "reject_zero_holm_5pct": true,
+        "familywise_95pct_bonferroni_interval": [
+          0.0659491631989676,
+          0.5099525515848039
+        ]
+      },
+      "small_t_to_large_t_plus_1_diagnostic": {
+        "predictor_coefficient": -0.21075605696783917,
+        "hac_standard_error": 0.08596735912480433,
+        "z_statistic": -2.451582311163835,
+        "two_sided_p_value": 0.0142229652889826,
+        "target_own_lag_coefficient": 0.19177080775348637,
+        "intercept": 0.0006199769454913962,
+        "full_model_r_squared": 0.016867725596031446,
+        "restricted_model_r_squared": 0.005818024538988831,
+        "incremental_r_squared": 0.011049701057042616,
+        "standardized_predictor_coefficient": -0.15627215350990062,
+        "holm_p_value_across_decades": 0.08533779173389561,
+        "reject_zero_holm_5pct": false
+      }
+    },
+    {
+      "decade": "1990s",
+      "first_return_date": "1990-01-02",
+      "last_return_date": "1999-12-31",
+      "regression_observations": 2527,
+      "large_t_to_small_t_plus_1": {
+        "predictor_coefficient": 0.05209155213244423,
+        "hac_standard_error": 0.026658633620312153,
+        "z_statistic": 1.9540218330152463,
+        "two_sided_p_value": 0.05069863521876799,
+        "target_own_lag_coefficient": 0.23436704010198223,
+        "intercept": 0.00035926519654798134,
+        "full_model_r_squared": 0.08026450910571759,
+        "restricted_model_r_squared": 0.0783299378057456,
+        "incremental_r_squared": 0.0019345712999719877,
+        "standardized_predictor_coefficient": 0.06350578955135215,
+        "holm_p_value_across_decades": 0.1671744637168306,
+        "reject_zero_holm_5pct": false,
+        "familywise_95pct_bonferroni_interval": [
+          -0.01824078191729616,
+          0.12242388618218461
+        ]
+      },
+      "small_t_to_large_t_plus_1_diagnostic": {
+        "predictor_coefficient": -0.028381107443444374,
+        "hac_standard_error": 0.04659377284619506,
+        "z_statistic": -0.6091180368056851,
+        "two_sided_p_value": 0.5424462029925072,
+        "target_own_lag_coefficient": 0.060212424134871045,
+        "intercept": 0.0006410967524389727,
+        "full_model_r_squared": 0.002149013446395287,
+        "restricted_model_r_squared": 0.0018894011296511914,
+        "incremental_r_squared": 0.00025961231674409557,
+        "standardized_predictor_coefficient": -0.0232639575098703,
+        "holm_p_value_across_decades": 1.0,
+        "reject_zero_holm_5pct": false
+      }
+    },
+    {
+      "decade": "2000s",
+      "first_return_date": "2000-01-03",
+      "last_return_date": "2009-12-31",
+      "regression_observations": 2514,
+      "large_t_to_small_t_plus_1": {
+        "predictor_coefficient": -0.10215395872768135,
+        "hac_standard_error": 0.07017741542418725,
+        "z_statistic": -1.455652906425977,
+        "two_sided_p_value": 0.14548859460910937,
+        "target_own_lag_coefficient": 0.07026678432700476,
+        "intercept": 0.00023613556939201298,
+        "full_model_r_squared": 0.0024592066158303227,
+        "restricted_model_r_squared": 6.00301785748103e-05,
+        "incremental_r_squared": 0.0023991764372555124,
+        "standardized_predictor_coefficient": -0.09211396351324323,
+        "holm_p_value_across_decades": 0.29097718921821875,
+        "reject_zero_holm_5pct": false,
+        "familywise_95pct_bonferroni_interval": [
+          -0.2873000354043429,
+          0.08299211794898018
+        ]
+      },
+      "small_t_to_large_t_plus_1_diagnostic": {
+        "predictor_coefficient": 0.021236986235247675,
+        "hac_standard_error": 0.07011872950937832,
+        "z_statistic": 0.30287180591894847,
+        "two_sided_p_value": 0.7619875584109054,
+        "target_own_lag_coefficient": -0.09473348709948207,
+        "intercept": -4.419151694444069e-05,
+        "full_model_r_squared": 0.005749631525496013,
+        "restricted_model_r_squared": 0.005592819033411134,
+        "incremental_r_squared": 0.00015681249208487902,
+        "standardized_predictor_coefficient": 0.023549663414085615,
+        "holm_p_value_across_decades": 1.0,
+        "reject_zero_holm_5pct": false
+      }
+    },
+    {
+      "decade": "2010s",
+      "first_return_date": "2010-01-04",
+      "last_return_date": "2019-12-31",
+      "regression_observations": 2515,
+      "large_t_to_small_t_plus_1": {
+        "predictor_coefficient": -0.05998889879834714,
+        "hac_standard_error": 0.07555383823704853,
+        "z_statistic": -0.7939887661316857,
+        "two_sided_p_value": 0.4272019712906443,
+        "target_own_lag_coefficient": -0.0022323878136183174,
+        "intercept": 0.00046660830298016453,
+        "full_model_r_squared": 0.002154617857412666,
+        "restricted_model_r_squared": 0.001679410465920128,
+        "incremental_r_squared": 0.0004752073914925381,
+        "standardized_predictor_coefficient": -0.04445764770280639,
+        "holm_p_value_across_decades": 0.4272019712906443,
+        "reject_zero_holm_5pct": false,
+        "familywise_95pct_bonferroni_interval": [
+          -0.2593193620663263,
+          0.13934156446963203
+        ]
+      },
+      "small_t_to_large_t_plus_1_diagnostic": {
+        "predictor_coefficient": -0.0013170519097876927,
+        "hac_standard_error": 0.038868711131465936,
+        "z_statistic": -0.03388463037359325,
+        "two_sided_p_value": 0.9729691493357682,
+        "target_own_lag_coefficient": -0.04165096869231327,
+        "intercept": 0.0005287536276990589,
+        "full_model_r_squared": 0.001869073187590109,
+        "restricted_model_r_squared": 0.001868311714173565,
+        "incremental_r_squared": 7.614734165439785e-07,
+        "standardized_predictor_coefficient": -0.001779640414184242,
+        "holm_p_value_across_decades": 1.0,
+        "reject_zero_holm_5pct": false
+      }
+    }
+  ],
+  "validation": "Every OLS coefficient and Newey-West covariance matrix matches an independent matrix implementation."
+}
